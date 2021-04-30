@@ -8,9 +8,9 @@
     "auto" 
     "caption" 
   ],
-  "success_url": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
-  "website": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
-  "repository": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
+  "success_url": "https://github.com/Ts-Bots/AutoCaption-Ts_Bot-Clone",
+  "website": "https://github.com/Ts-Bots/AutoCaption-Ts_Bot-Clone",
+  "repository": "https://github.com/Ts-Bots/AutoCaption-Ts_Bot-Clone",
   "env": {
     "WEBHOOK": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
