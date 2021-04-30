@@ -24,7 +24,7 @@ I am currently working for a channel if you want to use me, Use my source code a
    
 <i>(Support Markdown)</i>
 
-👉 Forward your files in your channel and i will edit it
+👉 Forward your files in your channel and I will edit it
 
 """    
               
