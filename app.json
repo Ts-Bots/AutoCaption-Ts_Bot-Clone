@@ -1,10 +1,12 @@
 {
   "name": "AutoCaption_Ts_Bot-Clone",
   "description": "Telegram auto caption bot. Create your Fork now.",
+  "logo": "https://telegra.ph/file/eee1877ba8a1e7077b2a8.jpg",
   "keywords": [
     "telegram",
     "best",
-    "caption"
+    "auto" 
+    "caption" 
   ],
   "success_url": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
   "website": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
