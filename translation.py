@@ -7,6 +7,7 @@ class Translation(object):
 
 I am a simple auto caption bot
 I can automatically add pre-setted caption to the files in channels
+
 I am currently working for a channel if you want to use me, Use my source code and Deploy me
 
 ⚜️ Maintained By 👉 @{}
@@ -23,7 +24,7 @@ I am currently working for a channel if you want to use me, Use my source code a
    
 <i>(Support Markdown)</i>
 
-👉 Forward your files in your channel that's it
+👉 Forward your files in your channel and i will edit it
 
 """    
               
