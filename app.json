@@ -1,0 +1,57 @@
+{
+  "name": "AutoCaption_Ts_Bot-Clone",
+  "description": "Telegram auto caption bot. Create your Fork now.",
+  "keywords": [
+    "telegram",
+    "best",
+    "caption"
+  ],
+  "success_url": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
+  "website": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
+  "repository": "https://github.com/Hillard-har/AutoCaption-Ts_Bot",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
+    },
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "CAPTION_TEXT": {
+      "description": "Add your caption Defult will be [nothing]",
+      "value": "", 
+      "required": "False" 
+    },
+    "CAPTION_POSITION": {
+      "description": "Position of your caption [Enter top or bottom or nil]",
+      "value": ""
+    },
+    "ADMIN_USERNAME": {
+      "description": "Admin username without [@], Default will be Ts_bots",
+      "value": "Ts_bots"
+    }        
+    
+  },
+  "addons": [
+  ],
+  "buildpacks": [{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "heroku/python"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
