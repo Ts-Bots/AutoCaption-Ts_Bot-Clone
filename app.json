@@ -29,7 +29,7 @@
     "CAPTION_TEXT": {
       "description": "Add your caption Defult will be [nothing]",
       "value": "", 
-      "required": "False" 
+      "required": "false" 
     },
     "CAPTION_POSITION": {
       "description": "Position of your caption [Enter top or bottom or nil]",
