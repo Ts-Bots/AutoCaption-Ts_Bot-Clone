@@ -29,7 +29,7 @@
     "CAPTION_TEXT": {
       "description": "Add your caption Defult will be [nothing]",
       "value": "", 
-      "required": "false" 
+      "required": false 
     },
     "CAPTION_POSITION": {
       "description": "Position of your caption [Enter top or bottom or nil]",
@@ -37,7 +37,8 @@
     },
     "ADMIN_USERNAME": {
       "description": "Admin username without [@], Default will be Ts_bots",
-      "value": "Ts_bots"
+      "value": "Ts_bots", 
+      "required": false
     }        
     
   },
