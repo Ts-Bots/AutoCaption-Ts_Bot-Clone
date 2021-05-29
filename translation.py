@@ -100,3 +100,12 @@ __ᴘʟᴇᴀsᴇ ɴᴏᴛᴇ ɪ ᴀᴍ ɴᴏᴛ ᴀ ᴘʀᴏ ᴄᴏᴅᴇʀ ᴀ
 
 """
 
+      NOT_ADMIN_TEXT = """
+
+🔰 <u>𝐒𝐎𝐑𝐑𝐘</u>
+
+Only my admin can see my status, if you want this bot you can take my source code and deploy it. 
+
+<b><a href="https://t.me/Ts_bots">©️ ᴛʀᴀᴄᴋsᴛᴜᴅɪᴏ's ʙᴏᴛs</a></b>
+
+"""
