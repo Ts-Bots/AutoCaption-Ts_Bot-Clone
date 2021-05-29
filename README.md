@@ -17,6 +17,7 @@ This is a auto caption bot which add the caption prescribed by the admin of bot
  /start - A command to start the bot
  /help  - A command to help you how to use the bot
  /about - A command to know about the bot
+ /set_caption - A command to set your own caption text
 
 ```
 #### Buttons
@@ -27,11 +28,8 @@ Bot Status - To know the current caption text and position of caption you provid
 # Deployment
 
 ## About Heroku Config Vars
+
 ```
-CAPTION_TEXT - Your caption text, if you didn't add caption text bot won't edit the file caption.
-
-(supports markdown)
-
 CAPTION_POSITION - Position of your caption
 
 (Top or bottom or nil) 
