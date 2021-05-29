@@ -17,8 +17,6 @@ This is a auto caption bot which add the caption prescribed by the admin of bot
  /start - A command to start the bot
  /help  - A command to help you how to use the bot
  /about - A command to know about the bot
- /set_caption - A command to set your own caption text
-
 ```
 #### Buttons
 
