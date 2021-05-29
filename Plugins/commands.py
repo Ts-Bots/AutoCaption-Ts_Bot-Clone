@@ -109,7 +109,8 @@ async def set_caption(c, m):
     await m.reply_text(
         text=f"🖊️ <b><u>Your</u> <u>Caption</u></b> \n\n {caption_text}",
         quote=True,
-        parse_mode="html"
+        parse_mode="html", 
+        disable_web_page_preview=True
     )    
     Config.CAPTION_TEXT = caption_text
    
