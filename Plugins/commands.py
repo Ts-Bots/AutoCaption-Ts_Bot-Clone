@@ -90,30 +90,7 @@ async def about(bot, cmd):
           parse_mode = "markdown",
           disable_web_page_preview = True, 
           reply_markup = about_button
-      )
-
-
-@autocaption.on_message(filters.command("set_caption") & filters.private & filters.user(Config.ADMIN_ID) & ~filters.edited)
-async def set_caption(c, m):    
-    
-    if len(m.command) == 1:
-        await m.reply_text(
-            text="Use this command to set your own caption\n\n Example:- <code>/set_caption My caption</code>",
-            disable_web_page_preview=True, 
-            quote=True,
-        )
-        return
-    
-    cmd, caption_text = m.text.split(" ", 1)    
-      
-    await m.reply_text(
-        text=f"🖊️ <b><u>Your</u> <u>Caption</u></b> \n\n {caption_text}",
-        quote=True,
-        parse_mode="html", 
-        disable_web_page_preview=True
-    )    
-    Config.CAPTION_TEXT = caption_text
-   
+      )   
 
 
 # call_backs 
