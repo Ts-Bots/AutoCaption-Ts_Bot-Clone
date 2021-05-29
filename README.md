@@ -23,6 +23,8 @@ This is a auto caption bot which add the caption prescribed by the admin of bot
 #### Buttons
 
 ```
+Admin Only
+
 Bot Status - To know the current caption text and position of caption you provided.
 ```
 # Deployment
