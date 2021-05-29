@@ -32,6 +32,11 @@
       "description": "Your user ID like 1223445566",
       "value": ""      
     },
+    "CAPTION_TEXT": {
+      "description": "Your caption text",
+      "value": "", 
+      "required": false
+    },
     "CAPTION_POSITION": {
       "description": "Position of your caption [Enter top or bottom or nil]",
       "value": ""
