@@ -13,13 +13,14 @@ from database.database import *
 # =
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
+caption_text = await get_caption(Config.ADMIN_ID)
 
 
 @autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
 async def editing(bot, message):
-      caption_text = await get_caption(message.from_user.id)
       if caption_text == None:
           return
+      caption_text = caption_text.caption
       try:
           if (message.document or message.video or message.audio):
              file_caption = f"**{message.caption}**"
