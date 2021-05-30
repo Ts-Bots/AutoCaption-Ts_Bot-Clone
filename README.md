@@ -7,9 +7,9 @@ An open source telegram Auto Caption bot
 
 # About Bot
 
-This is a auto caption bot which add the caption prescribed by the admin of bot
+This is a light weight and fastest Auto caption bot which can add caption prescribed by the admin of bot
 
-<i>(Only in channels either public or private Telegram channel)</i> 
+<i>( Works only in private or public Channel )</i> 
 
 ### Commands
 
