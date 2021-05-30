@@ -19,7 +19,9 @@ caption_position = usercaption_position.lower()
 async def editing(bot, message):
       caption_text = await get_caption(Config.ADMIN_ID)
       if caption_text == None:
-          return
+          caption_text = Config.CAPTION_TEXT
+          if not caption_text:
+              return
       caption_text = caption_text.caption
       try:
           if (message.document or message.video or message.audio):
