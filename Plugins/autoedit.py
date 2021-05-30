@@ -19,7 +19,7 @@ caption_position = usercaption_position.lower()
 async def editing(bot, message):
       caption_text = await get_caption(Config.ADMIN_ID)
       if caption_text == None:
-          caption_text = Config.CAPTION_TEXT
+          caption_text = "" #Config.CAPTION_TEXT
           if not caption_text:
               return
       caption_text = caption_text.caption
