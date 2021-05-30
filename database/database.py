@@ -14,7 +14,7 @@ from config import Config
 
 
 def start() -> scoped_session:
-    engine = create_engine(Config.DB_URI, client_encoding="utf8")
+    engine = create_engine(Config.DB_URL, client_encoding="utf8")
     BASE.metadata.bind = engine
     BASE.metadata.create_all(engine)
     return scoped_session(sessionmaker(bind=engine, autoflush=False))
@@ -45,7 +45,7 @@ async def update_caption(id, caption):
             SESSION.flush()
         else:
             SESSION.delete(cap)
-            cap = custom_caption(id, custom)
+            cap = custom_caption(id, caption)
             SESSION.add(cap)
         SESSION.commit()
 
@@ -57,7 +57,7 @@ async def del_caption(id):
 
 async def get_caption(id):
     try:
-        t = SESSION.query(custom_caption).get(id)
-        return t
+        caption = SESSION.query(custom_caption).get(id)
+        return caption
     finally:
         SESSION.close()

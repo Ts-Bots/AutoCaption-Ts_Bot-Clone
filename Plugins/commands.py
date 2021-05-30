@@ -7,6 +7,7 @@ import pyrogram
 from pyrogram import filters
 from bot import autocaption
 from config import Config
+from database.database import *
 from translation import Translation
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
  
@@ -91,6 +92,34 @@ async def about(bot, cmd):
           disable_web_page_preview = True, 
           reply_markup = about_button
       )   
+
+
+@autocaption.on_message(filters.command("set_caption") & filters.private)
+async def set_caption(bot, cmd):
+    if Config.ADMIN_ID != cmd.from_user.id:
+        return
+
+    if len(cmd.command) == 1:
+        await cmd.reply_text(
+            "🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍\n\nUse this command to set your own caption for your renamed file"
+        )
+    else:
+        command, caption = cmd.text.split(' ', 1)
+        await update_caption(cmd.from_user.id, caption)
+        await cmd.reply_text(f"**--Your Caption--:**\n\n{caption}", quote=True)
+
+
+@autocaption.on_message(filters.command("caption") & filters.private)
+async def caption(bot, cmd):
+    if Config.ADMIN_ID != cmd.from_user.id:
+        return
+
+    caption = await get_caption(cmd.from_user.id)
+    if caption != None:
+        text = f"**--Your custom caption:--**\n\n{caption.caption}"
+    else:
+        text = "You didn't set any caption yet. Please set that by /set_caption and use this command to check your caption"
+    await cmd.reply_text(text, quote=True)
 
 
 # call_backs 
