@@ -193,7 +193,10 @@ async def button(bot, cmd: CallbackQuery):
           )
     elif "status_data" in cb_data:
           if Config.ADMIN_ID == int(cmd.message.chat.id):
-             caption = await get_caption(cmd.from_user.id)
+             try:
+                caption = await get_caption(cmd.from_user.id)
+             except:
+                 caption = "Not Added" 
              await cmd.message.edit(
                   text=Translation.STATUS_DATA.format(caption.caption, Config.CAPTION_POSITION),
                   parse_mode="html", 
