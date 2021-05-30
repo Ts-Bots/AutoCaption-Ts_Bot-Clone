@@ -7,18 +7,24 @@ import asyncio
 from pyrogram import filters
 from bot import autocaption
 from config import Config
+from database.database import *
 
 
 # =
 usercaption_position = Config.CAPTION_POSITION
 caption_position = usercaption_position.lower()
-caption_text = Config.CAPTION_TEXT
 
 
 @autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
 async def editing(bot, message):
+      caption_text = await get_caption(Config.ADMIN_ID)
+      if caption_text == None:
+          caption_text = Config.CAPTION_TEXT
+          if not caption_text:
+              return
+      caption_text = caption_text.caption
       try:
-          if ( message.document or message.video or message.audio ):
+          if (message.document or message.video or message.audio):
              file_caption = f"**{message.caption}**"
       except:
           pass
