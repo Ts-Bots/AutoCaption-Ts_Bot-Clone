@@ -111,7 +111,7 @@ async def caption(bot, cmd):
     caption = await get_caption(cmd.from_user.id)
     print(caption)
     if caption != None:
-        text = f"**--Your custom caption:--**\n\n{caption}"
+        text = f"**--Your custom caption:--**\n\n{caption.caption}"
     else:
         text = "You didn't set any caption yet. Please set that by /set_caption and use this command to check your caption"
     await cmd.reply_text(text, quote=True)
