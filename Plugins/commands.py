@@ -197,7 +197,7 @@ async def button(bot, cmd: CallbackQuery):
                 caption = await get_caption(cmd.from_user.id)
                 caption_text = caption.caption
              except:
-                 caption = "Not Added" 
+                caption_text = "Not Added" 
              await cmd.message.edit(
                   text=Translation.STATUS_DATA.format(caption_text, Config.CAPTION_POSITION),
                   parse_mode="html", 
