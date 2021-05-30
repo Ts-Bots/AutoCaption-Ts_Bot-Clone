@@ -101,7 +101,7 @@ async def set_caption(bot, cmd):
 
     if len(cmd.command) == 1:
         await cmd.reply_text(
-            "🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍 \n\nUse this command to set your own caption text", 
+            "🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍 \n\nUse this command to set your own caption text \n\n👉 `set_caption My Caption`", 
             quote = True
         )
     else:
