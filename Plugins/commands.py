@@ -203,9 +203,9 @@ async def button(bot, cmd: CallbackQuery):
           )
     elif "status_data" in cb_data:
           if Config.ADMIN_ID == int(cmd.message.chat.id):
-             caption_text = await get_caption(cmd.from_user.id)
+             caption = await get_caption(cmd.from_user.id)
              await cmd.message.edit(
-                  text=Translation.STATUS_DATA.format(caption_text.caption_text, Config.CAPTION_POSITION),
+                  text=Translation.STATUS_DATA.format(caption.caption, Config.CAPTION_POSITION),
                   parse_mode="html", 
                   disable_web_page_preview=True, 
                   reply_markup=InlineKeyboardMarkup(
