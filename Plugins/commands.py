@@ -93,6 +93,28 @@ async def about(bot, cmd):
       )   
 
 
+@autocaption.on_message(filters.command("set_caption") & filters.private)
+async def set_caption(bot, cmd):
+    if len(m.command) == 1:
+        await cmd.reply_text(
+            "Send me the caption in the format `/set_caption your caption`"
+        )
+    else:
+        command, caption = cmd.text.split(' ', 1)
+        await update_caption(cmd.from_user.id, caption)
+        await cmd.reply_text(f"**--Your Caption--:**\n\n{caption}", quote=True)
+
+
+@autocaption.on_message(filters.command("caption") & filters.private)
+async def caption(bot, cmd):
+    caption = await get_caption(cmd.from_user.id)
+    if caption != None:
+        text = f"**--Your custom caption:--**\n\n{caption}"
+    else:
+        text = "You didn't set any caption yet. Please set that by /set_caption and use this command to check your caption"
+    await cmd.reply_text(text, quote=True)
+
+
 # call_backs 
 
 @autocaption.on_callback_query()
