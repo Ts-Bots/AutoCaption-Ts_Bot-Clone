@@ -109,6 +109,7 @@ async def set_caption(bot, cmd):
 @autocaption.on_message(filters.command("caption") & filters.private)
 async def caption(bot, cmd):
     caption = await get_caption(cmd.from_user.id)
+    print(caption)
     if caption != None:
         text = f"**--Your custom caption:--**\n\n{caption}"
     else:
