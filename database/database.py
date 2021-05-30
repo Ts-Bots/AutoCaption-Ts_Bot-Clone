@@ -45,7 +45,7 @@ async def update_caption(id, caption):
             SESSION.flush()
         else:
             SESSION.delete(cap)
-            cap = custom_caption(id, custom)
+            cap = custom_caption(id, caption)
             SESSION.add(cap)
         SESSION.commit()
 
