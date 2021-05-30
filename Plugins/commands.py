@@ -97,7 +97,7 @@ async def about(bot, cmd):
 async def set_caption(bot, cmd):
     if len(m.command) == 1:
         await cmd.reply_text(
-            "Send me the caption in the format `/set_caption your caption`"
+            "🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍\n\nUse this command to set your own caption for your renamed file"
         )
     else:
         command, caption = cmd.text.split(' ', 1)
