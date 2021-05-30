@@ -7,6 +7,7 @@ import pyrogram
 from pyrogram import filters
 from bot import autocaption
 from config import Config
+from database.database import *
 from translation import Translation
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
  
@@ -95,7 +96,7 @@ async def about(bot, cmd):
 
 @autocaption.on_message(filters.command("set_caption") & filters.private)
 async def set_caption(bot, cmd):
-    if len(m.command) == 1:
+    if len(cmd.command) == 1:
         await cmd.reply_text(
             "🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍\n\nUse this command to set your own caption for your renamed file"
         )
