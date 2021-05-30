@@ -18,6 +18,7 @@ caption_position = usercaption_position.lower()
 @autocaption.on_message(filters.channel & (filters.document | filters.video | filters.audio ) & ~filters.edited, group=-1)
 async def editing(bot, message):
       caption_text = await get_caption(message.from_user.id)
+      caption_text = caption_text if caption_text != None else ""
       try:
           if (message.document or message.video or message.audio):
              file_caption = f"**{message.caption}**"
