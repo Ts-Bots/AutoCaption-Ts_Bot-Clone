@@ -96,6 +96,9 @@ async def about(bot, cmd):
 
 @autocaption.on_message(filters.command("set_caption") & filters.private)
 async def set_caption(bot, cmd):
+    if Config.ADMIN_ID != cmd.from_user.id:
+        return
+
     if len(cmd.command) == 1:
         await cmd.reply_text(
             "🖊️ 𝐒𝐄𝐓 𝐂𝐀𝐏𝐓𝐈𝐎𝐍\n\nUse this command to set your own caption for your renamed file"
@@ -108,8 +111,10 @@ async def set_caption(bot, cmd):
 
 @autocaption.on_message(filters.command("caption") & filters.private)
 async def caption(bot, cmd):
+    if Config.ADMIN_ID != cmd.from_user.id:
+        return
+
     caption = await get_caption(cmd.from_user.id)
-    print(caption)
     if caption != None:
         text = f"**--Your custom caption:--**\n\n{caption.caption}"
     else:
