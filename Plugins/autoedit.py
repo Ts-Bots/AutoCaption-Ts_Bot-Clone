@@ -24,14 +24,15 @@ async def editing(bot, message):
          caption_text = ""
          pass 
       try:
-          if (message.document or message.video or message.audio):
-             try:
-                file_caption = f"**{message.caption}**"
-                if file_caption == "None":
-                   file_caption = " "
-             except:
+          if (message.document or message.video or message.audio):             
+             file_caption = f"**{message.caption}**"
+
+             if file_caption == "None":
                 file_caption = " "
-                pass 
+             else:
+                file_caption = file_caption            
+                
+                 
       except:
           pass
       try:
