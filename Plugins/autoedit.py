@@ -27,7 +27,7 @@ async def editing(bot, message):
           if message.caption:                        
              file_caption = f"**{message.caption}**"                
           else:
-             file_caption = " "           
+             file_caption = ""           
                                                  
       try:
           if caption_position == "top":
