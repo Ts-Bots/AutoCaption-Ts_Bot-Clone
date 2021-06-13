@@ -1,7 +1,7 @@
 # AutoCaption-Ts_Bot
 
 
-An open source telegram Auto Caption bot
+An open source of telegram Auto Caption bot
 
 - For demo you can check the <b>[AutoCaption_Ts_Bot](https://telegram.me/AutoCaption_Ts_Bot)</b>
 
