@@ -25,7 +25,7 @@ async def editing(bot, message):
          pass 
       if (message.document or message.video or message.audio): 
           if message.caption:                        
-             file_caption = f"**__{message.caption}__**"                
+             file_caption = f"__{message.caption}__"                
           else:
              file_caption = ""           
                                                  
