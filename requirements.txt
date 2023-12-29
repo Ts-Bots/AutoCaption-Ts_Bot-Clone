@@ -2,3 +2,8 @@ pyrogram==1.4.0
 tgcrypto
 psycopg2-binary
 sqlalchemy==1.3.23
+pyrogram
+tgcrypto
+Flask==2.2.2
+gunicorn==20.1.0
+aiohttp==3.8.1
